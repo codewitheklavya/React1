@@ -1,0 +1,47 @@
+*{
+  background-color: black;
+  color: white;
+}
+
+html,
+body{
+  height: 100%;
+  width: 100%;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  background-color: aqua;
+  color: black;
+}
+ 
+.nav div{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-right: 30px;
+  color: black;
+}
+
+.nav * {
+  background-color: transparent;
+}
+
+h2{
+  color: black;
+}
+
+h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 100px;
+  white-space: nowrap;
+  text-decoration: underline;
+}
+
+a{
+  color: black;
+}
