@@ -8,17 +8,25 @@ import About from './pages/About.jsx'
 import NotFound from './pages/NotFound.jsx'
 import Men from './pages/Men.jsx'
 import Women from './pages/Women.jsx'
+import Courses from './pages/Courses.jsx'
+import CourseDetails from './pages/CourseDetails.jsx'
+import Navbar2 from './components/Navbar2.jsx'
 
 const App = () => {
   return (
     <div className='h-screen bg-black text-white'>
       <Navbar/>
+      <Navbar2/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='/Product' element={<Product/>}/>
-        <Route path='/Product/Men' element={<Men/>}/>
-        <Route path='/Product/Women' element={<Women/>}/>
+        <Route path='/courses' element={<Courses/>}/>
+        <Route path='/courses/:id' element={<CourseDetails/>}/>{/*ab kuch bhi likhenge courses ke baad / laga kr toh coursesDetails wali khulegi*/}
+        <Route path='/Product' element={<Product/>}>
+          <Route path='Men' element={<Men/>}/>
+          <Route path='Women' element={<Women/>}/>
+        </Route>
+        
         
         <Route path='*' element={<NotFound/>}/>
       </Routes>
